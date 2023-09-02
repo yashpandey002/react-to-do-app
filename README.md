@@ -33,6 +33,8 @@ To get started with the To-Do app, follow these simple steps:
 
 Once you've installed the app, you can run it locally:
 
+1. Start the Development Server:
+
     ```bash
     npm run dev
     ```
