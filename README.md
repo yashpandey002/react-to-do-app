@@ -19,6 +19,32 @@ To get started with the To-Do app, follow these simple steps:
 1. **Clone the Repository:**
 
     ```bash
-    git clone <repository-url>
+    git clone git@github.com:yashpandey002/react-to-do-app.git
     cd to-do-app
     ```
+
+2. **Install Dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+Once you've installed the app, you can run it locally:
+
+    ```bash
+    npm run dev
+    ```
+
+This will start a development server, and you can access the app in your web browser at http://localhost:3000. You can now start adding, updating, and completing tasks.
+
+## Features
+
+-   Create Tasks: Easily add new tasks to your to-do list.
+-   Update Tasks: Edit task names or descriptions to keep your list up to date.
+-   Complete Tasks: Mark tasks as completed when you've finished them.
+-   Delete Tasks: Remove tasks that are no longer relevant.
+-   Clear All Completed Tasks: Quickly remove all completed tasks to keep your list clean.
+-   Filter Tasks: Filter tasks based on their completion status (All, Active, Completed).
+-   Local Storage: Your tasks are saved locally in your browser, so they persist between sessions.
