@@ -9,8 +9,6 @@ This is a simple To-Do app built using React and Vite. It allows users to create
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [Features](#features)
--   [Contributing](#contributing)
--   [License](#license)
 
 ## Installation
 
@@ -48,5 +46,3 @@ This will start a development server, and you can access the app in your web bro
 -   Complete Tasks: Mark tasks as completed when you've finished them.
 -   Delete Tasks: Remove tasks that are no longer relevant.
 -   Clear All Completed Tasks: Quickly remove all completed tasks to keep your list clean.
--   Filter Tasks: Filter tasks based on their completion status (All, Active, Completed).
--   Local Storage: Your tasks are saved locally in your browser, so they persist between sessions.
