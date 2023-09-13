@@ -1,4 +1,4 @@
-export default function InitialScreen() {
+export default function InitialScreen({ setShowTodos }) {
     return (
         <div className="initial-screen__mainBox flex">
             <div className="initial-screen__img-box">
@@ -8,7 +8,12 @@ export default function InitialScreen() {
                 />
             </div>
             <div className="initial-screen__addTodo-box">
-                <button className="initial-screen__addTodo-btn">+</button>
+                <button
+                    className="initial-screen__addTodo-btn"
+                    onClick={() => setShowTodos(true)}
+                >
+                    +
+                </button>
             </div>
         </div>
     );

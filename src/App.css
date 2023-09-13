@@ -25,6 +25,15 @@ body {
     outline: none;
 }
 
+input,
+button {
+    border: none;
+}
+
+input {
+    font-family: inherit;
+}
+
 ul {
     list-style: none;
 }
@@ -41,9 +50,45 @@ a {
     display: flex;
 }
 
+.align-center {
+    align-items: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: 1rem;
+}
+
 /*******************/
 /* Todo Wrapper */
 /*******************/
+
+/*******************/
+/* Initial Screen */
+/*******************/
+
+.initial-screen__mainBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 8rem;
+}
+
+.initial-screen__addTodo-btn {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #24464d;
+    font-size: 5.6rem;
+    font-weight: 400;
+    color: #d9d9d9;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px 0px rgba(255, 255, 255, 0.49);
+}
 
 /*******************/
 /* To-do list heading */
@@ -78,25 +123,104 @@ a {
 }
 
 /*******************/
-/* Initial Screen */
+/* To-do */
 /*******************/
 
-.initial-screen__mainBox {
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-    margin-top: 8rem;
+.todos__mainBox {
 }
 
-.initial-screen__addTodo-btn {
-    height: 7rem;
-    width: 7rem;
-    border-radius: 50%;
-    border: none;
-    background-color: #24464d;
-    font-size: 5.6rem;
+.todos__upcomingTaks__mainBox,
+.todos__finishedTaks-mainBox {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.todos__upcomingTaks__wrapper,
+.todos__finishedTaks__wrapper {
+    width: 700px;
+}
+
+.todos__upcomingTaks__heading,
+.todos__finishedTaks__heading {
+    font-size: 2rem;
     font-weight: 400;
-    color: #d9d9d9;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+}
+
+.todos__upcomingTaks__listContainer,
+.todos__finishedTaks__listContainer {
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+/*******************/
+/* Add new task */
+/*******************/
+
+.addNewTask__mainBox {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7.2rem;
+    padding-bottom: 4rem;
+}
+
+.addNewTask__wrapper {
+    width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.addNewTask-input {
+    width: 100%;
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+
+.addNewTask-btn {
+    padding: 2rem 4rem;
+    font-size: 2.4rem;
+    background-color: #24464d;
+    color: #fff;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 5px 10px 20px 0px rgba(255, 255, 255, 0.49);
+}
+
+/*******************/
+/* task */
+/*******************/
+
+.task {
+    font-size: 2rem;
+    padding: 1.6rem 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+    align-items: center;
+    gap: 1rem;
+}
+
+.todos__upcomingTaks__listContainer .task {
+    color: #24464d;
+    background-color: #d9d9d9;
+}
+
+.todos__finishedTaks__listContainer .task {
+    color: #ededed;
+    background-color: #93c4cd;
+    text-decoration: line-through;
+}
+
+.task__indicator-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    cursor: pointer;
+}
+
+.task__edit-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
 }
