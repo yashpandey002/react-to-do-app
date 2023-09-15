@@ -219,8 +219,15 @@ a {
     cursor: pointer;
 }
 
-.task__edit-icon {
+.task__edit-icon,
+.task__done-icon,
+.task__delete-icon {
     height: 2rem;
     width: 2rem;
     cursor: pointer;
 }
+
+/* {
+    height: 1.4rem;
+    width: 1.4rem;
+} */
