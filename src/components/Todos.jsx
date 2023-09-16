@@ -1,11 +1,11 @@
 import { useState } from "react";
 import AddNewTask from "./AddNewTask";
 import UpcomingTask from "./UpcomingTask";
+import CompletedTask from "./CompletedTask";
 
 export default function Todos() {
     const [todos, setTodos] = useState([]);
     const [completedTodos, setCompletedTodos] = useState([]);
-    console.log(todos);
 
     const handleTaskDone = (task) => {
         setCompletedTodos([...completedTodos, task]);
@@ -33,6 +33,17 @@ export default function Todos() {
         }
     };
 
+    const handleEditTask = (updatedText, todoKey) => {
+        const updatedTodos = todos.map((todo) => {
+            if (todo.key === todoKey) {
+                return { ...todo, text: updatedText };
+            }
+            return todo;
+        });
+
+        setTodos(updatedTodos);
+    };
+
     return (
         <div className="todos__mainBox">
             <AddNewTask todos={todos} setTodos={setTodos} />
@@ -47,6 +58,7 @@ export default function Todos() {
                             <UpcomingTask
                                 todo={todo}
                                 handleTaskDone={handleTaskDone}
+                                handleEditTask={handleEditTask}
                                 handleTaskDelete={handleTaskDelete}
                                 key={todo.key}
                             />
@@ -61,32 +73,12 @@ export default function Todos() {
                     </h2>
                     <ul className="todos__finishedTaks__listContainer flex">
                         {completedTodos.map((completedTodo) => (
-                            <li
-                                className="task flex align-center justify-space-between"
+                            <CompletedTask
+                                completedTodo={completedTodo}
+                                handleTaskRestore={handleTaskRestore}
+                                handleTaskDelete={handleTaskDelete}
                                 key={completedTodo.key}
-                            >
-                                <div className="flex align-center gap-sm">
-                                    <img
-                                        src="./checkmark.svg"
-                                        className="task__done-icon"
-                                        onClick={() =>
-                                            handleTaskRestore(completedTodo)
-                                        }
-                                    />
-                                    <div className="task__textBox">
-                                        {completedTodo.text}
-                                    </div>
-                                </div>
-                                <div className="flex align-center">
-                                    <img
-                                        src="./delete-icon.svg"
-                                        className="task__delete-icon"
-                                        onClick={() =>
-                                            handleTaskDelete(completedTodo, "d")
-                                        }
-                                    />
-                                </div>
-                            </li>
+                            />
                         ))}
                     </ul>
                 </div>
