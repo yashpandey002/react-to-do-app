@@ -48,41 +48,46 @@ export default function Todos() {
         <div className="todos__mainBox">
             <AddNewTask todos={todos} setTodos={setTodos} />
 
-            <div className="todos__upcomingTaks__mainBox flex">
-                <div className="todos__upcomingTaks__wrapper">
-                    <h2 className="todos__upcomingTaks__heading">
-                        Upcoming tasks:
-                    </h2>
-                    <ul className="todos__upcomingTaks__listContainer flex">
-                        {todos.map((todo) => (
-                            <UpcomingTask
-                                todo={todo}
-                                handleTaskDone={handleTaskDone}
-                                handleEditTask={handleEditTask}
-                                handleTaskDelete={handleTaskDelete}
-                                key={todo.key}
-                            />
-                        ))}
-                    </ul>
+            {todos.length > 0 ? (
+                <div className="todos__upcomingTaks__mainBox flex">
+                    <div className="todos__upcomingTaks__wrapper">
+                        <h2 className="todos__upcomingTaks__heading">
+                            Upcoming tasks:
+                        </h2>
+                        <ul className="todos__upcomingTaks__listContainer flex">
+                            {todos.map((todo) => (
+                                <UpcomingTask
+                                    todo={todo}
+                                    handleTaskDone={handleTaskDone}
+                                    handleEditTask={handleEditTask}
+                                    handleTaskDelete={handleTaskDelete}
+                                    key={todo.key}
+                                />
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div className="todos__finishedTaks-mainBox flex">
-                <div className="todos__finishedTaks__wrapper">
-                    <h2 className="todos__finishedTaks__heading">
-                        Finished tasks:
-                    </h2>
-                    <ul className="todos__finishedTaks__listContainer flex">
-                        {completedTodos.map((completedTodo) => (
-                            <CompletedTask
-                                completedTodo={completedTodo}
-                                handleTaskRestore={handleTaskRestore}
-                                handleTaskDelete={handleTaskDelete}
-                                key={completedTodo.key}
-                            />
-                        ))}
-                    </ul>
+            ) : null}
+
+            {completedTodos.length > 0 ? (
+                <div className="todos__finishedTaks-mainBox flex">
+                    <div className="todos__finishedTaks__wrapper">
+                        <h2 className="todos__finishedTaks__heading">
+                            Finished tasks:
+                        </h2>
+                        <ul className="todos__finishedTaks__listContainer flex">
+                            {completedTodos.map((completedTodo) => (
+                                <CompletedTask
+                                    completedTodo={completedTodo}
+                                    handleTaskRestore={handleTaskRestore}
+                                    handleTaskDelete={handleTaskDelete}
+                                    key={completedTodo.key}
+                                />
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            ) : null}
         </div>
     );
 }
