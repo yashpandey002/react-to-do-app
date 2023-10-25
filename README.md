@@ -39,4 +39,3 @@ This will start a development server, and you can access the app in your web bro
 -   Update Tasks: Edit task names or descriptions to keep your list up to date.
 -   Complete Tasks: Mark tasks as completed when you've finished them.
 -   Delete Tasks: Remove tasks that are no longer relevant.
--   Clear All Completed Tasks: Quickly remove all completed tasks to keep your list clean.
