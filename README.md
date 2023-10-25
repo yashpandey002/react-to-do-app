@@ -4,12 +4,6 @@
 
 This is a simple To-Do app built using React and Vite. It allows users to create, read, update, and delete tasks, helping them stay organized and manage their daily tasks efficiently.
 
-## Table of Contents
-
--   [Installation](#installation)
--   [Usage](#usage)
--   [Features](#features)
-
 ## Installation
 
 To get started with the To-Do app, follow these simple steps:
