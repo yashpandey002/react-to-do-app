@@ -1,4 +1,4 @@
-# Simple To-Do App with React and Vite
+# To-Do List App with React and Vite
 
 ## Overview
 
